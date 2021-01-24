@@ -1,34 +1,29 @@
 import * as PIXI from 'pixi.js';
-import snakePart from "./images/snake.png";
+import {Snake} from "./ts/snake.ts";
+import {Food} from "./ts/food.ts";
 
-let Application = PIXI.Application,
-    loader = PIXI.Loader.shared,
-    resources = PIXI.Loader.shared.resources,
-    Sprite = PIXI.Sprite;
+let Width = 256;
+let Height = 256;
 
-let app = new Application({ 
-    width: 256, 
-    height: 256,                       
+let app = new PIXI.Application({ 
+    width: Width, 
+    height: Height,                       
     antialias: true, 
     transparent: false, 
     resolution: 1
   }
 );
 
-const FPS:number = 60;
-const frameDelay:number = 1000 / FPS;
-let running: bool = true;
+let food = new Food(app);
+let snake = new Snake(app, Width, Height);
 
 document.body.appendChild(app.view);
-loader.add("snake", snakePart).load(setup);
-let snake = new Sprite(resources["snake"].texture);
-app.stage.addChild(snake);
+document.addEventListener('keydown', event =>{
+    snake.move(event);
+});
 
-function setup(){
-
-    app.ticker.add(delta => gameLoop(delta));
-}
+app.ticker.add(delta => gameLoop(delta));
 
 function gameLoop(delta){
-
+    snake.update()
 }

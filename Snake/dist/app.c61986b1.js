@@ -48918,9 +48918,189 @@ var filters = {
   NoiseFilter: _filterNoise.NoiseFilter
 };
 exports.filters = filters;
-},{"@pixi/polyfill":"../node_modules/@pixi/polyfill/lib/polyfill.es.js","@pixi/utils":"../node_modules/@pixi/utils/lib/utils.es.js","@pixi/accessibility":"../node_modules/@pixi/accessibility/lib/accessibility.es.js","@pixi/interaction":"../node_modules/@pixi/interaction/lib/interaction.es.js","@pixi/app":"../node_modules/@pixi/app/lib/app.es.js","@pixi/core":"../node_modules/@pixi/core/lib/core.es.js","@pixi/extract":"../node_modules/@pixi/extract/lib/extract.es.js","@pixi/loaders":"../node_modules/@pixi/loaders/lib/loaders.es.js","@pixi/particles":"../node_modules/@pixi/particles/lib/particles.es.js","@pixi/prepare":"../node_modules/@pixi/prepare/lib/prepare.es.js","@pixi/spritesheet":"../node_modules/@pixi/spritesheet/lib/spritesheet.es.js","@pixi/sprite-tiling":"../node_modules/@pixi/sprite-tiling/lib/sprite-tiling.es.js","@pixi/text-bitmap":"../node_modules/@pixi/text-bitmap/lib/text-bitmap.es.js","@pixi/ticker":"../node_modules/@pixi/ticker/lib/ticker.es.js","@pixi/filter-alpha":"../node_modules/@pixi/filter-alpha/lib/filter-alpha.es.js","@pixi/filter-blur":"../node_modules/@pixi/filter-blur/lib/filter-blur.es.js","@pixi/filter-color-matrix":"../node_modules/@pixi/filter-color-matrix/lib/filter-color-matrix.es.js","@pixi/filter-displacement":"../node_modules/@pixi/filter-displacement/lib/filter-displacement.es.js","@pixi/filter-fxaa":"../node_modules/@pixi/filter-fxaa/lib/filter-fxaa.es.js","@pixi/filter-noise":"../node_modules/@pixi/filter-noise/lib/filter-noise.es.js","@pixi/mixin-cache-as-bitmap":"../node_modules/@pixi/mixin-cache-as-bitmap/lib/mixin-cache-as-bitmap.es.js","@pixi/mixin-get-child-by-name":"../node_modules/@pixi/mixin-get-child-by-name/lib/mixin-get-child-by-name.es.js","@pixi/mixin-get-global-position":"../node_modules/@pixi/mixin-get-global-position/lib/mixin-get-global-position.es.js","@pixi/constants":"../node_modules/@pixi/constants/lib/constants.es.js","@pixi/display":"../node_modules/@pixi/display/lib/display.es.js","@pixi/graphics":"../node_modules/@pixi/graphics/lib/graphics.es.js","@pixi/math":"../node_modules/@pixi/math/lib/math.es.js","@pixi/mesh":"../node_modules/@pixi/mesh/lib/mesh.es.js","@pixi/mesh-extras":"../node_modules/@pixi/mesh-extras/lib/mesh-extras.es.js","@pixi/runner":"../node_modules/@pixi/runner/lib/runner.es.js","@pixi/sprite":"../node_modules/@pixi/sprite/lib/sprite.es.js","@pixi/sprite-animated":"../node_modules/@pixi/sprite-animated/lib/sprite-animated.es.js","@pixi/text":"../node_modules/@pixi/text/lib/text.es.js","@pixi/settings":"../node_modules/@pixi/settings/lib/settings.es.js"}],"images/snake.png":[function(require,module,exports) {
-module.exports = "/snake.b81ed68e.png";
-},{}],"app.ts":[function(require,module,exports) {
+},{"@pixi/polyfill":"../node_modules/@pixi/polyfill/lib/polyfill.es.js","@pixi/utils":"../node_modules/@pixi/utils/lib/utils.es.js","@pixi/accessibility":"../node_modules/@pixi/accessibility/lib/accessibility.es.js","@pixi/interaction":"../node_modules/@pixi/interaction/lib/interaction.es.js","@pixi/app":"../node_modules/@pixi/app/lib/app.es.js","@pixi/core":"../node_modules/@pixi/core/lib/core.es.js","@pixi/extract":"../node_modules/@pixi/extract/lib/extract.es.js","@pixi/loaders":"../node_modules/@pixi/loaders/lib/loaders.es.js","@pixi/particles":"../node_modules/@pixi/particles/lib/particles.es.js","@pixi/prepare":"../node_modules/@pixi/prepare/lib/prepare.es.js","@pixi/spritesheet":"../node_modules/@pixi/spritesheet/lib/spritesheet.es.js","@pixi/sprite-tiling":"../node_modules/@pixi/sprite-tiling/lib/sprite-tiling.es.js","@pixi/text-bitmap":"../node_modules/@pixi/text-bitmap/lib/text-bitmap.es.js","@pixi/ticker":"../node_modules/@pixi/ticker/lib/ticker.es.js","@pixi/filter-alpha":"../node_modules/@pixi/filter-alpha/lib/filter-alpha.es.js","@pixi/filter-blur":"../node_modules/@pixi/filter-blur/lib/filter-blur.es.js","@pixi/filter-color-matrix":"../node_modules/@pixi/filter-color-matrix/lib/filter-color-matrix.es.js","@pixi/filter-displacement":"../node_modules/@pixi/filter-displacement/lib/filter-displacement.es.js","@pixi/filter-fxaa":"../node_modules/@pixi/filter-fxaa/lib/filter-fxaa.es.js","@pixi/filter-noise":"../node_modules/@pixi/filter-noise/lib/filter-noise.es.js","@pixi/mixin-cache-as-bitmap":"../node_modules/@pixi/mixin-cache-as-bitmap/lib/mixin-cache-as-bitmap.es.js","@pixi/mixin-get-child-by-name":"../node_modules/@pixi/mixin-get-child-by-name/lib/mixin-get-child-by-name.es.js","@pixi/mixin-get-global-position":"../node_modules/@pixi/mixin-get-global-position/lib/mixin-get-global-position.es.js","@pixi/constants":"../node_modules/@pixi/constants/lib/constants.es.js","@pixi/display":"../node_modules/@pixi/display/lib/display.es.js","@pixi/graphics":"../node_modules/@pixi/graphics/lib/graphics.es.js","@pixi/math":"../node_modules/@pixi/math/lib/math.es.js","@pixi/mesh":"../node_modules/@pixi/mesh/lib/mesh.es.js","@pixi/mesh-extras":"../node_modules/@pixi/mesh-extras/lib/mesh-extras.es.js","@pixi/runner":"../node_modules/@pixi/runner/lib/runner.es.js","@pixi/sprite":"../node_modules/@pixi/sprite/lib/sprite.es.js","@pixi/sprite-animated":"../node_modules/@pixi/sprite-animated/lib/sprite-animated.es.js","@pixi/text":"../node_modules/@pixi/text/lib/text.es.js","@pixi/settings":"../node_modules/@pixi/settings/lib/settings.es.js"}],"ts/vector.ts":[function(require,module,exports) {
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var Vector2D = /*#__PURE__*/function () {
+  function Vector2D(x, y) {
+    _classCallCheck(this, Vector2D);
+
+    this.x = x;
+    this.y = y;
+  }
+
+  _createClass(Vector2D, [{
+    key: "set",
+    value: function set(x, y) {
+      this.x = x;
+      this.y = y;
+    }
+  }, {
+    key: "equals",
+    value: function equals(v) {
+      return this.x == v.x && this.y == v.y;
+    }
+  }]);
+
+  return Vector2D;
+}();
+
+exports.Vector2D = Vector2D;
+},{}],"ts/snake.ts":[function(require,module,exports) {
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var vector_ts_1 = require("./vector.ts");
+
+var PIXI = __importStar(require("pixi.js"));
+
+var Snake = /*#__PURE__*/function () {
+  function Snake(app, width, height) {
+    _classCallCheck(this, Snake);
+
+    this.position = new vector_ts_1.Vector2D(0, 0);
+    this.velocity = new vector_ts_1.Vector2D(0, 0);
+    this.speed = 2;
+    this.boxWidth = 32;
+    this.boxHeight = 32;
+    this.box = new PIXI.Graphics();
+    this.windowWidth = 0;
+    this.windowHeight = 0;
+    this.box.beginFill(0x008000);
+    this.box.drawRect(0, 0, this.boxWidth, this.boxHeight);
+    this.box.endFill();
+    this.windowWidth = width - 1;
+    this.windowHeight = height - 1;
+    app.stage.addChild(this.box);
+  }
+
+  _createClass(Snake, [{
+    key: "move",
+    value: function move(key) {
+      if (key.keyCode === 87 || key.keyCode === 38) {
+        this.position.y--;
+        this.velocity.y = -1;
+        this.velocity.x = 0;
+      }
+
+      if (key.keyCode === 83 || key.keyCode === 40) {
+        this.position.y++;
+        this.velocity.y = 1;
+        this.velocity.x = 0;
+      }
+
+      if (key.keyCode === 65 || key.keyCode === 37) {
+        this.position.x--;
+        this.velocity.x = -1;
+        this.velocity.y = 0;
+      }
+
+      if (key.keyCode === 68 || key.keyCode === 39) {
+        this.position.x++;
+        this.velocity.x = 1;
+        this.velocity.y = 0;
+      }
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      this.position.x += this.velocity.x * this.speed;
+      this.position.y += this.velocity.y * this.speed;
+      console.log(this.position.y);
+
+      if (this.position.x < 0) {
+        this.velocity.x = 0;
+        this.velocity.y = 0;
+      }
+
+      if (this.position.y < 0) {
+        this.velocity.x = 0;
+        this.velocity.y = 0;
+      }
+
+      if (this.position.x > this.windowWidth - this.boxWidth) {
+        this.velocity.x = 0;
+        this.velocity.y = 0;
+      }
+
+      if (this.position.y > this.windowHeight - this.boxHeight) {
+        this.velocity.x = 0;
+        this.velocity.y = 0;
+      }
+
+      this.box.position.set(this.position.x, this.position.y);
+    }
+  }]);
+
+  return Snake;
+}();
+
+exports.Snake = Snake;
+},{"./vector.ts":"ts/vector.ts","pixi.js":"../node_modules/pixi.js/lib/pixi.es.js"}],"ts/food.ts":[function(require,module,exports) {
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var PIXI = __importStar(require("pixi.js"));
+
+var Food = function Food(app) {
+  _classCallCheck(this, Food);
+
+  this.boxWidth = 32;
+  this.boxHeight = 32;
+  this.box = new PIXI.Graphics();
+  this.box.beginFill(0x800000);
+  this.box.drawRect(0, 0, this.boxWidth, this.boxHeight);
+  this.box.endFill();
+  this.box.position.set(64, 64);
+  app.stage.addChild(this.box);
+};
+
+exports.Food = Food;
+},{"pixi.js":"../node_modules/pixi.js/lib/pixi.es.js"}],"app.ts":[function(require,module,exports) {
 "use strict";
 
 var __importStar = this && this.__importStar || function (mod) {
@@ -48933,47 +49113,39 @@ var __importStar = this && this.__importStar || function (mod) {
   return result;
 };
 
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var PIXI = __importStar(require("pixi.js"));
 
-var snake_png_1 = __importDefault(require("./images/snake.png"));
+var snake_ts_1 = require("./ts/snake.ts");
 
-var Application = PIXI.Application,
-    loader = PIXI.Loader.shared,
-    resources = PIXI.Loader.shared.resources,
-    Sprite = PIXI.Sprite;
-var app = new Application({
-  width: 256,
-  height: 256,
+var food_ts_1 = require("./ts/food.ts");
+
+var Width = 256;
+var Height = 256;
+var app = new PIXI.Application({
+  width: Width,
+  height: Height,
   antialias: true,
   transparent: false,
   resolution: 1
 });
-var FPS = 60;
-var frameDelay = 1000 / FPS;
-var running = true;
+var food = new food_ts_1.Food(app);
+var snake = new snake_ts_1.Snake(app, Width, Height);
 document.body.appendChild(app.view);
-loader.add("snake", snake_png_1.default).load(setup);
-var snake = new Sprite(resources["snake"].texture);
-app.stage.addChild(snake);
+document.addEventListener('keydown', function (event) {
+  snake.move(event);
+});
+app.ticker.add(function (delta) {
+  return gameLoop(delta);
+});
 
-function setup() {
-  app.ticker.add(function (delta) {
-    return gameLoop(delta);
-  });
+function gameLoop(delta) {
+  snake.update();
 }
-
-function gameLoop(delta) {}
-},{"pixi.js":"../node_modules/pixi.js/lib/pixi.es.js","./images/snake.png":"images/snake.png"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"pixi.js":"../node_modules/pixi.js/lib/pixi.es.js","./ts/snake.ts":"ts/snake.ts","./ts/food.ts":"ts/food.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -49001,7 +49173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56475" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60503" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

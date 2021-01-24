@@ -1,3 +1,4 @@
+// Using vectors to make position calculations easier
 export class Vector2D {
     x: number;
     y: number;
